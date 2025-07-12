@@ -1,0 +1,114 @@
+[
+  {
+    "id": "hokkaido_sapporo",
+    "prefecture": "北海道",
+    "city": "札幌市",
+    "reading": "さっぽろし",
+    "keywords": ["札幌", "さっぽろ", "北海道"]
+  },
+  {
+    "id": "aomori_aomori",
+    "prefecture": "青森県",
+    "city": "青森市",
+    "reading": "あおもりし",
+    "keywords": ["青森", "あおもり"]
+  },
+  {
+    "id": "miyagi_sendai",
+    "prefecture": "宮城県",
+    "city": "仙台市",
+    "reading": "せんだいし",
+    "keywords": ["仙台", "せんだい", "宮城"]
+  },
+  {
+    "id": "tokyo_shibuya",
+    "prefecture": "東京都",
+    "city": "渋谷区",
+    "reading": "しぶやく",
+    "keywords": ["渋谷", "しぶや", "東京"]
+  },
+  {
+    "id": "tokyo_shinjuku",
+    "prefecture": "東京都",
+    "city": "新宿区",
+    "reading": "しんじゅくく",
+    "keywords": ["新宿", "しんじゅく", "東京"]
+  },
+  {
+    "id": "kanagawa_yokohama",
+    "prefecture": "神奈川県",
+    "city": "横浜市",
+    "reading": "よこはまし",
+    "keywords": ["横浜", "よこはま", "神奈川"]
+  },
+  {
+    "id": "saitama_kawaguchi",
+    "prefecture": "埼玉県",
+    "city": "川口市",
+    "reading": "かわぐちし",
+    "keywords": ["川口", "かわぐち", "埼玉"]
+  },
+  {
+    "id": "saitama_saitama",
+    "prefecture": "埼玉県",
+    "city": "さいたま市",
+    "reading": "さいたまし",
+    "keywords": ["さいたま", "大宮", "浦和", "埼玉"]
+  },
+  {
+    "id": "chiba_chiba",
+    "prefecture": "千葉県",
+    "city": "千葉市",
+    "reading": "ちばし",
+    "keywords": ["千葉", "ちば"]
+  },
+  {
+    "id": "tokyo_setagaya",
+    "prefecture": "東京都",
+    "city": "世田谷区",
+    "reading": "せたがやく",
+    "keywords": ["世田谷", "せたがや", "東京"]
+  },
+  {
+    "id": "aichi_nagoya",
+    "prefecture": "愛知県",
+    "city": "名古屋市",
+    "reading": "なごやし",
+    "keywords": ["名古屋", "なごや", "愛知"]
+  },
+  {
+    "id": "kyoto_kyoto",
+    "prefecture": "京都府",
+    "city": "京都市",
+    "reading": "きょうとし",
+    "keywords": ["京都", "きょうと"]
+  },
+  {
+    "id": "osaka_osaka",
+    "prefecture": "大阪府",
+    "city": "大阪市",
+    "reading": "おおさかし",
+    "keywords": ["大阪", "おおさか"]
+  },
+  {
+    "id": "hyogo_kobe",
+    "prefecture": "兵庫県",
+    "city": "神戸市",
+    "reading": "こうべし",
+    "keywords": ["神戸", "こうべ", "兵庫"]
+  },
+  {
+    "id": "hiroshima_hiroshima",
+    "prefecture": "広島県",
+    "city": "広島市",
+    "reading": "ひろしまし",
+    "keywords": ["広島", "ひろしま"]
+  },
+  {
+    "id": "fukuoka_fukuoka",
+    "prefecture": "福岡県",
+    "city": "福岡市",
+    "reading": "ふくおかし",
+    "keywords": ["福岡", "ふくおか"]
+  }
+]

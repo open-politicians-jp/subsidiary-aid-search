@@ -1,0 +1,30 @@
+{
+  "name": "search_subsidiary_aid",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "dev": "next dev",
+    "build": "next build",
+    "start": "next start",
+    "lint": "next lint",
+    "type-check": "tsc --noEmit"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "dependencies": {
+    "@tailwindcss/postcss": "^4.1.11",
+    "@types/flexsearch": "^0.7.42",
+    "@types/node": "^24.0.13",
+    "@types/react": "^19.1.8",
+    "autoprefixer": "^10.4.21",
+    "flexsearch": "^0.8.205",
+    "next": "^15.3.5",
+    "postcss": "^8.5.6",
+    "react": "^19.1.0",
+    "react-dom": "^19.1.0",
+    "tailwindcss": "^4.1.11",
+    "typescript": "^5.8.3"
+  }
+}
