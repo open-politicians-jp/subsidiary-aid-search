@@ -12,8 +12,6 @@ search_subsidiary_aid/
 │   └── ...           # その他Next.js関連ファイル
 ├── scripts/          # データ取得・処理スクリプト
 │   └── (今後追加予定) # Python スクレイピングスクリプト等
-├── table.md         # 補助金データ（Markdown形式）
-├── index.html       # 元のHTMLモック
 └── README.md        # このファイル
 ```
 
@@ -61,6 +59,3 @@ GitHub Actionsを使用してGitHub Pagesに自動デプロイされます。
 2. **自動デプロイ**
    - mainブランチへのプッシュで自動実行
    - 手動実行も可能（Actions タブ）
-
-3. **URL**
-   - `https://[username].github.io/search_subsidiary_aid/`
