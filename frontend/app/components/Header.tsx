@@ -1,14 +1,41 @@
-export default function Header() {
+'use client'
+
+import Navigation from './Navigation'
+
+interface HeaderProps {
+  activeTab: 'search' | 'contact'
+  onTabChange: (tab: 'search' | 'contact') => void
+}
+
+export default function Header({ activeTab, onTabChange }: HeaderProps) {
   return (
-    <header className="flex flex-col md:flex-row justify-between items-center mb-10 gap-2 text-center md:text-left">
-      <div className="flex items-center gap-3">
-        <div className="w-12 h-12 bg-primary-500 rounded-full flex items-center justify-center text-white text-xl">
-          💰
+    <header className="header">
+      <div className="header-content">
+        {/* ロゴ・タイトル部分 */}
+        <div className="header-left">
+          <div className="logo">
+            <div className="logo-icon">💰</div>
+            <h1 className="title">補助金検索</h1>
+          </div>
+          <div className="subtitle">あなたの知らない補助金が見つかるかもしれません</div>
         </div>
-        <h1 className="text-3xl font-bold text-primary-500">補助金検索</h1>
+
+        {/* ナビゲーション部分 */}
+        <div className="header-right">
+          <Navigation activeTab={activeTab} onTabChange={onTabChange} />
+        </div>
       </div>
-      <div className="text-gray-600 text-sm">
-        あなたにぴったりの補助金を簡単に見つけられます
+
+      {/* 注意書き */}
+      <div className="notice-container">
+        <div className="notice-box">
+          <span className="notice-icon">⚠️</span>
+          <div className="notice-text">
+            <strong>ご注意ください</strong><br />
+            補助金一覧には漏れがある場合や、既に期限が過ぎているものが含まれる可能性があります。<br />
+            詳細は必ず各自治体の公式サイトでご確認ください。
+          </div>
+        </div>
       </div>
     </header>
   )

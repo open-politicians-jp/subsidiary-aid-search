@@ -3,6 +3,7 @@
 import { useState, useEffect, useMemo } from 'react'
 import FlexSearch from 'flexsearch'
 import subsidiesData from '../data/subsidies.json'
+import kodairaData from '../data/tokyo/kodaira.json'
 
 export interface Subsidy {
   id: string
@@ -17,9 +18,22 @@ export interface Subsidy {
   keywords: string[]
 }
 
+export interface SearchFilter {
+  query?: string
+  prefecture?: string
+  city?: string
+  category?: string
+}
+
 export function useSearch() {
   const [searchResults, setSearchResults] = useState<Subsidy[]>([])
   const [isLoading, setIsLoading] = useState(false)
+  const [currentFilter, setCurrentFilter] = useState<SearchFilter>({})
+
+  // 全てのデータを統合
+  const allSubsidiesData = useMemo(() => {
+    return [...subsidiesData, ...kodairaData]
+  }, [])
 
   // FlexSearchインデックスの初期化
   const searchIndex = useMemo(() => {
@@ -28,7 +42,7 @@ export function useSearch() {
     })
 
     // データをインデックスに追加
-    subsidiesData.forEach((subsidy) => {
+    allSubsidiesData.forEach((subsidy) => {
       const searchText = [
         subsidy.name,
         subsidy.category,
@@ -42,26 +56,44 @@ export function useSearch() {
     })
 
     return index
-  }, [])
+  }, [allSubsidiesData])
 
-  const search = async (query: string) => {
-    if (!query.trim()) {
-      setSearchResults([])
-      return
-    }
-
+  const search = async (searchFilter: SearchFilter) => {
+    setCurrentFilter(searchFilter)
     setIsLoading(true)
     
     try {
-      // FlexSearchで検索実行
-      const results = await searchIndex.search(query)
+      let results = allSubsidiesData
+
+      // キーワード検索
+      if (searchFilter.query?.trim()) {
+        const searchResults = await searchIndex.search(searchFilter.query)
+        results = allSubsidiesData.filter(subsidy => 
+          searchResults.includes(subsidy.id)
+        )
+      }
+
+      // 地域フィルター
+      if (searchFilter.prefecture) {
+        results = results.filter(subsidy => 
+          subsidy.prefecture === searchFilter.prefecture
+        )
+      }
+
+      if (searchFilter.city) {
+        results = results.filter(subsidy => 
+          subsidy.city === searchFilter.city
+        )
+      }
+
+      // カテゴリフィルター
+      if (searchFilter.category) {
+        results = results.filter(subsidy => 
+          subsidy.category === searchFilter.category
+        )
+      }
       
-      // 結果のIDを使用して実際のデータを取得
-      const matchedSubsidies = subsidiesData.filter(subsidy => 
-        results.includes(subsidy.id)
-      )
-      
-      setSearchResults(matchedSubsidies)
+      setSearchResults(results)
     } catch (error) {
       console.error('検索エラー:', error)
       setSearchResults([])
@@ -70,20 +102,27 @@ export function useSearch() {
     }
   }
 
+  // 従来のsearch関数との互換性維持
+  const searchByQuery = async (query: string) => {
+    return search({ query })
+  }
+
   const getAllSubsidies = () => {
-    return subsidiesData
+    return allSubsidiesData
   }
 
   const getSubsidiesByCategory = (category: string) => {
-    return subsidiesData.filter(subsidy => 
+    return allSubsidiesData.filter(subsidy => 
       subsidy.category === category
     )
   }
 
   return {
     search,
+    searchByQuery,
     searchResults,
     isLoading,
+    currentFilter,
     getAllSubsidies,
     getSubsidiesByCategory
   }

@@ -1,0 +1,112 @@
+{
+  "prefectures": [
+    {
+      "id": "hokkaido",
+      "name": "北海道",
+      "reading": "ほっかいどう",
+      "region": "北海道",
+      "cityCount": 1,
+      "subsidyCount": 0
+    },
+    {
+      "id": "aomori",
+      "name": "青森県",
+      "reading": "あおもりけん",
+      "region": "東北",
+      "cityCount": 1,
+      "subsidyCount": 0
+    },
+    {
+      "id": "miyagi",
+      "name": "宮城県",
+      "reading": "みやぎけん",
+      "region": "東北",
+      "cityCount": 1,
+      "subsidyCount": 0
+    },
+    {
+      "id": "saitama",
+      "name": "埼玉県",
+      "reading": "さいたまけん",
+      "region": "関東",
+      "cityCount": 2,
+      "subsidyCount": 17
+    },
+    {
+      "id": "chiba",
+      "name": "千葉県",
+      "reading": "ちばけん",
+      "region": "関東",
+      "cityCount": 1,
+      "subsidyCount": 0
+    },
+    {
+      "id": "tokyo",
+      "name": "東京都",
+      "reading": "とうきょうと",
+      "region": "関東",
+      "cityCount": 4,
+      "subsidyCount": 14
+    },
+    {
+      "id": "kanagawa",
+      "name": "神奈川県",
+      "reading": "かながわけん",
+      "region": "関東",
+      "cityCount": 1,
+      "subsidyCount": 0
+    },
+    {
+      "id": "aichi",
+      "name": "愛知県",
+      "reading": "あいちけん",
+      "region": "中部",
+      "cityCount": 1,
+      "subsidyCount": 0
+    },
+    {
+      "id": "kyoto",
+      "name": "京都府",
+      "reading": "きょうとふ",
+      "region": "関西",
+      "cityCount": 1,
+      "subsidyCount": 0
+    },
+    {
+      "id": "osaka",
+      "name": "大阪府",
+      "reading": "おおさかふ",
+      "region": "関西",
+      "cityCount": 1,
+      "subsidyCount": 0
+    },
+    {
+      "id": "hyogo",
+      "name": "兵庫県",
+      "reading": "ひょうごけん",
+      "region": "関西",
+      "cityCount": 1,
+      "subsidyCount": 0
+    },
+    {
+      "id": "hiroshima",
+      "name": "広島県",
+      "reading": "ひろしまけん",
+      "region": "中国",
+      "cityCount": 1,
+      "subsidyCount": 0
+    },
+    {
+      "id": "fukuoka",
+      "name": "福岡県",
+      "reading": "ふくおかけん",
+      "region": "九州",
+      "cityCount": 1,
+      "subsidyCount": 0
+    }
+  ],
+  "totalCities": 16,
+  "totalSubsidies": 31,
+  "lastUpdated": "2025-01-13",
+  "version": "1.0"
+}

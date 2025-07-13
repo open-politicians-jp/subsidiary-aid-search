@@ -1,0 +1,46 @@
+[
+  {
+    "id": "kodaira",
+    "name": "小平市",
+    "reading": "こだいら",
+    "prefecture": "tokyo",
+    "prefectureName": "東京都",
+    "type": "市",
+    "population": 195000,
+    "subsidyCount": 14,
+    "keywords": ["小平", "こだいら", "東京"]
+  },
+  {
+    "id": "shibuya",
+    "name": "渋谷区",
+    "reading": "しぶや",
+    "prefecture": "tokyo",
+    "prefectureName": "東京都",
+    "type": "区",
+    "population": 230000,
+    "subsidyCount": 0,
+    "keywords": ["渋谷", "しぶや", "東京"]
+  },
+  {
+    "id": "shinjuku",
+    "name": "新宿区",
+    "reading": "しんじゅく",
+    "prefecture": "tokyo",
+    "prefectureName": "東京都",
+    "type": "区",
+    "population": 350000,
+    "subsidyCount": 0,
+    "keywords": ["新宿", "しんじゅく", "東京"]
+  },
+  {
+    "id": "setagaya",
+    "name": "世田谷区",
+    "reading": "せたがや",
+    "prefecture": "tokyo",
+    "prefectureName": "東京都",
+    "type": "区",
+    "population": 920000,
+    "subsidyCount": 0,
+    "keywords": ["世田谷", "せたがや", "東京"]
+  }
+]

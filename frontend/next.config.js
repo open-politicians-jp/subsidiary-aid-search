@@ -6,7 +6,12 @@ const nextConfig = {
   assetPrefix: '/subsidiary-aid-search/',
   images: {
     unoptimized: true
-  }
+  },
+  typescript: {
+    ignoreBuildErrors: false,
+  },
+  reactStrictMode: true,
+  swcMinify: true,
 }
 
 module.exports = nextConfig

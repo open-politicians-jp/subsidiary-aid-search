@@ -1,47 +1,76 @@
 'use client'
 
-import { useState } from 'react'
-import { useSearch } from './hooks/useSearch'
-import { useCitySuggest, City } from './hooks/useCitySuggest'
-import CitySelector from './components/CitySelector'
+import { useState, useEffect } from 'react'
+import { useSearch, SearchFilter } from './hooks/useSearch'
+import { useRegionFilter, Prefecture, City } from './hooks/useRegionFilter'
+import RegionSelector from './components/RegionSelector'
+import CategorySelector from './components/CategorySelector'
+import Header from './components/Header'
 
 export default function Home() {
   const [activeTab, setActiveTab] = useState<'search' | 'contact'>('search')
   const [searchQuery, setSearchQuery] = useState('')
+  const [selectedPrefecture, setSelectedPrefecture] = useState<Prefecture | null>(null)
   const [selectedCity, setSelectedCity] = useState<City | null>(null)
-  const { search, searchResults, isLoading } = useSearch()
+  const [selectedCategory, setSelectedCategory] = useState('')
+  const [isMounted, setIsMounted] = useState(false)
+  const { search, searchResults, isLoading, currentFilter } = useSearch()
+
+  // ハイドレーション対応
+  useEffect(() => {
+    setIsMounted(true)
+  }, [])
+
+  // 検索実行
+  const executeSearch = () => {
+    const filter: SearchFilter = {
+      query: searchQuery || undefined,
+      prefecture: selectedPrefecture?.name || undefined,
+      city: selectedCity?.name || undefined,
+      category: selectedCategory || undefined
+    }
+    search(filter)
+  }
 
   const handleSearch = (e: React.FormEvent) => {
     e.preventDefault()
-    
-    // 検索クエリに市区町村フィルターを追加
-    let query = searchQuery
-    if (selectedCity) {
-      query = `${query} ${selectedCity.prefecture} ${selectedCity.city}`.trim()
-    }
-    
-    search(query)
+    executeSearch()
   }
 
-  const handleCategoryClick = (category: string) => {
-    setSearchQuery(category)
+  const handleCategorySelect = (category: string) => {
+    setSelectedCategory(category)
     
-    // カテゴリ検索に市区町村フィルターを追加
-    let query = category
-    if (selectedCity) {
-      query = `${query} ${selectedCity.prefecture} ${selectedCity.city}`.trim()
+    // カテゴリ選択時に即座に検索実行
+    const filter: SearchFilter = {
+      query: searchQuery || undefined,
+      prefecture: selectedPrefecture?.name || undefined,
+      city: selectedCity?.name || undefined,
+      category: category || undefined
     }
-    
-    search(query)
+    search(filter)
   }
 
-  const handleCitySelect = (city: City | null) => {
+  const handleRegionChange = (prefecture: Prefecture | null, city: City | null) => {
+    setSelectedPrefecture(prefecture)
     setSelectedCity(city)
     
-    // 市区町村が選択された場合、即座に検索を実行
-    if (city && searchQuery) {
-      const query = `${searchQuery} ${city.prefecture} ${city.city}`.trim()
-      search(query)
+    // 地域選択時に即座に検索実行（検索クエリがある場合）
+    if (searchQuery || selectedCategory) {
+      const filter: SearchFilter = {
+        query: searchQuery || undefined,
+        prefecture: prefecture?.name || undefined,
+        city: city?.name || undefined,
+        category: selectedCategory || undefined
+      }
+      search(filter)
+    } else if (prefecture || city) {
+      // 地域のみ選択された場合も検索実行
+      const filter: SearchFilter = {
+        prefecture: prefecture?.name || undefined,
+        city: city?.name || undefined,
+        category: selectedCategory || undefined
+      }
+      search(filter)
     }
   }
 
@@ -50,31 +79,12 @@ export default function Home() {
   }
 
   return (
-    <div className="container">
-      {/* Header */}
-      <header className="header">
-        <div className="logo">
-          <div className="logo-icon">💰</div>
-          <h1 className="title">補助金検索</h1>
-        </div>
-        <div className="subtitle">あなたの知らない補助金が見つかるかもしれません</div>
-      </header>
+    <div className="app">
+      {/* ヘッダー */}
+      <Header activeTab={activeTab} onTabChange={switchTab} />
 
-      {/* Tab Navigation */}
-      <nav className="tab-nav">
-        <button 
-          className={`tab-button ${activeTab === 'search' ? 'active' : ''}`}
-          onClick={() => switchTab('search')}
-        >
-          🔍 検索
-        </button>
-        <button 
-          className={`tab-button ${activeTab === 'contact' ? 'active' : ''}`}
-          onClick={() => switchTab('contact')}
-        >
-          📧 お問い合わせ
-        </button>
-      </nav>
+      {/* メインコンテンツ */}
+      <div className="container">
 
       {/* Search Tab Content */}
       <div className={`tab-content ${activeTab === 'search' ? 'active' : ''}`}>
@@ -92,50 +102,39 @@ export default function Home() {
           </form>
         </section>
 
-        {/* City Filter */}
-        <div className="filter-section">
-          <h2 className="filter-title">📍 地域で絞り込み</h2>
-          <CitySelector onCitySelect={handleCitySelect} selectedCity={selectedCity} />
-          {selectedCity && (
-            <div className="selected-city">
-              {selectedCity.prefecture} {selectedCity.city} で絞り込み中
-            </div>
-          )}
-        </div>
+        {/* Filters Section */}
+        <div className="filters-container">
+          {/* Region Filter */}
+          <div className="filter-section">
+            <RegionSelector 
+              onSelectionChange={handleRegionChange}
+              selectedPrefecture={selectedPrefecture}
+              selectedCity={selectedCity}
+            />
+          </div>
 
-        {/* Popular Categories Card */}
-        <div className="cards-container">
-          <div className="card">
-            <h2 className="card-title">
-              📈 カテゴリー
-            </h2>
-            <div className="keywords-grid">
-              {['子育て支援', '住宅リフォーム', '医療費助成', '環境・省エネ', '高齢者支援', '起業・創業', '教育・学費', '農業支援'].map((category) => (
-                <span 
-                  key={category}
-                  className="keyword-tag"
-                  onClick={() => handleCategoryClick(category)}
-                >
-                  {category}
-                </span>
-              ))}
-            </div>
+          {/* Category Filter */}
+          <div className="filter-section">
+            <CategorySelector 
+              onCategorySelect={handleCategorySelect}
+              selectedCategory={selectedCategory}
+            />
           </div>
         </div>
 
         {/* Search Results */}
-        {isLoading && (
+        {isMounted && isLoading && (
           <div className="loading">検索中...</div>
         )}
 
-        {!isLoading && searchQuery && searchResults.length === 0 && (
+        {isMounted && !isLoading && searchQuery && searchResults.length === 0 && (
           <div className="no-results">
             「{searchQuery}」に関する補助金が見つかりませんでした。<br />
             別のキーワードでお試しください。
           </div>
         )}
 
-        {!isLoading && searchResults.length > 0 && (
+        {isMounted && !isLoading && searchResults.length > 0 && (
           <div className="search-results">
             <h2 className="results-title">検索結果: {searchResults.length}件</h2>
             {searchResults.map((subsidy) => (
@@ -226,6 +225,7 @@ export default function Home() {
             </div>
           </div>
         </section>
+      </div>
       </div>
     </div>
   )

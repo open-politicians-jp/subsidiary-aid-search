@@ -1,0 +1,24 @@
+[
+  {
+    "id": "kawaguchi",
+    "name": "川口市",
+    "reading": "かわぐち",
+    "prefecture": "saitama",
+    "prefectureName": "埼玉県",
+    "type": "市",
+    "population": 600000,
+    "subsidyCount": 17,
+    "keywords": ["川口", "かわぐち", "埼玉"]
+  },
+  {
+    "id": "saitama",
+    "name": "さいたま市",
+    "reading": "さいたま",
+    "prefecture": "saitama",
+    "prefectureName": "埼玉県",
+    "type": "市",
+    "population": 1300000,
+    "subsidyCount": 0,
+    "keywords": ["さいたま", "大宮", "浦和", "埼玉"]
+  }
+]
