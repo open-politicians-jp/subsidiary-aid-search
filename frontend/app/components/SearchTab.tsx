@@ -12,12 +12,12 @@ export default function SearchTab() {
 
   const handleSearch = (query: string) => {
     setSearchQuery(query)
-    search(query)
+    search({ query })
   }
 
   const handleCategoryClick = (category: string) => {
     setSearchQuery(category)
-    search(category)
+    search({ category })
   }
 
   return (
