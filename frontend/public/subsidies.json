@@ -1,0 +1,885 @@
+[
+  {
+    "id": "kawaguchi_housing_reform",
+    "name": "川口市住宅リフォーム補助金",
+    "amount": "工事費の5％（上限10万円）",
+    "eligibility": "市税を滞納していない、工事を行う住宅に住民票がある、市内に本社を置く業者が施工",
+    "applicationMethod": "窓口での申請（郵送不可）※工事着工前に申請が必要",
+    "referenceUrl": "https://www.city.kawaguchi.lg.jp/soshiki/01130/040/2_2/2122.html",
+    "prefecture": "埼玉県",
+    "city": "川口市",
+    "category": "住宅リフォーム",
+    "keywords": [
+      "住宅",
+      "リフォーム",
+      "工事",
+      "補助金"
+    ]
+  },
+  {
+    "id": "kawaguchi_hedge_installation",
+    "name": "生け垣設置等補助金",
+    "amount": "生け垣: 最大11,000円/m、植込地: 最大11,000円/㎡、フェンス緑化: 最大1,100円/m、既存塀の撤去: 最大8,800円/m",
+    "eligibility": "市街化区域内にあること、市内の業者に依頼、5年以上の維持管理",
+    "applicationMethod": "事前相談の上、申請書を提出※工事着工前に相談・申請が必要",
+    "referenceUrl": "https://www.city.kawaguchi.lg.jp/soshiki/01130/070/2/2248.html",
+    "prefecture": "埼玉県",
+    "city": "川口市",
+    "category": "環境・省エネ",
+    "keywords": [
+      "生け垣",
+      "緑化",
+      "環境",
+      "補助金"
+    ]
+  },
+  {
+    "id": "kawaguchi_global_warming",
+    "name": "川口市地球温暖化対策活動支援金",
+    "amount": "太陽光発電: 最大16万円、蓄電池: 最大16万円、エネファーム: 最大6万円※市内業者利用の場合",
+    "eligibility": "市内に居住し、住民登録がある、市税の滞納がない",
+    "applicationMethod": "申請書を提出※事業着手（契約・購入）の2週間前までに申請が必要",
+    "referenceUrl": "https://www.city.kawaguchi.lg.jp/soshiki/01100/010/2/1/34382.html",
+    "prefecture": "埼玉県",
+    "city": "川口市",
+    "category": "環境・省エネ",
+    "keywords": [
+      "太陽光",
+      "蓄電池",
+      "エネファーム",
+      "地球温暖化",
+      "省エネ"
+    ]
+  },
+  {
+    "id": "kawaguchi_block_fence",
+    "name": "ブロック塀等安全対策補助金",
+    "amount": "撤去工事: 費用の2/3（上限30万円）、改修工事: 費用の2/3（上限20万円）",
+    "eligibility": "通学路に面した危険なブロック塀等",
+    "applicationMethod": "要問合せ",
+    "referenceUrl": "https://www.city.kawaguchi.lg.jp/soshiki/01130/060/2/25716.html",
+    "prefecture": "埼玉県",
+    "city": "川口市",
+    "category": "住宅リフォーム",
+    "keywords": [
+      "ブロック塀",
+      "安全対策",
+      "撤去",
+      "改修"
+    ]
+  },
+  {
+    "id": "kawaguchi_child_allowance",
+    "name": "児童手当（令和6年9月分まで）",
+    "amount": "3歳未満: 15,000円、3歳～小学生(第1,2子): 10,000円、3歳～小学生(第3子～): 15,000円、中学生: 10,000円※所得制限あり",
+    "eligibility": "中学校修了前までの児童を養育している方",
+    "applicationMethod": "要申請",
+    "referenceUrl": "https://www.city.kawaguchi.lg.jp/kosodate_gakkou/kosodatehenoteate_kyufu/2/38297.html",
+    "prefecture": "埼玉県",
+    "city": "川口市",
+    "category": "子育て支援",
+    "keywords": [
+      "児童手当",
+      "子育て",
+      "支援",
+      "手当"
+    ]
+  },
+  {
+    "id": "kawaguchi_child_medical",
+    "name": "子ども医療費支給制度（令和6年10月～）",
+    "amount": "保険適用の医療費の一部",
+    "eligibility": "18歳の年度末までのお子さん",
+    "applicationMethod": "事前の資格登録が必要（窓口、郵送、オンライン）",
+    "referenceUrl": "https://www.city.kawaguchi.lg.jp/kosodate_gakkou/kosodatehenoteate_kyufu/2/46840.html",
+    "prefecture": "埼玉県",
+    "city": "川口市",
+    "category": "医療費助成",
+    "keywords": [
+      "子ども",
+      "医療費",
+      "助成",
+      "支給制度"
+    ]
+  },
+  {
+    "id": "kawaguchi_baby_support",
+    "name": "赤ちゃんにっこり応援金",
+    "amount": "新生児1人につき1万円",
+    "eligibility": "出生時に乳児と保護者が川口市民、1歳の誕生日前日までの乳児を養育",
+    "applicationMethod": "1歳の誕生日前日までに申請（窓口、ウェブ、郵送）",
+    "referenceUrl": "https://www.city.kawaguchi.lg.jp/kosodate_gakkou/kosodatehenoteate_kyufu/2/38221.html",
+    "prefecture": "埼玉県",
+    "city": "川口市",
+    "category": "子育て支援",
+    "keywords": [
+      "赤ちゃん",
+      "応援金",
+      "新生児",
+      "子育て"
+    ]
+  },
+  {
+    "id": "kawaguchi_home_visit_childcare",
+    "name": "訪問型病児・病後児保育利用助成制度",
+    "amount": "1時間につき1,000円を上限とし、利用料の1/2",
+    "eligibility": "国認定のベビーシッター派遣事業または川口市緊急サポートセンター事業を利用、小学校6年生までの児童の保護者、利用時および申請時に川口市内に居住",
+    "applicationMethod": "要問合せ",
+    "referenceUrl": "https://www.city.kawaguchi.lg.jp/kosodate_gakkou/kosodatehenoteate_kyufu/2/9270.html",
+    "prefecture": "埼玉県",
+    "city": "川口市",
+    "category": "子育て支援",
+    "keywords": [
+      "病児保育",
+      "ベビーシッター",
+      "子育て",
+      "助成"
+    ]
+  },
+  {
+    "id": "kawaguchi_welfare_fund",
+    "name": "川口市福祉資金貸付制度",
+    "amount": "生活費: 最大10万円、その他: 最大25万円",
+    "eligibility": "川口市に3ヶ月以上居住、市税の滞納がない、返済能力がある、連帯保証人",
+    "applicationMethod": "要問合せ",
+    "referenceUrl": "https://www.city.kawaguchi.lg.jp/soshiki/01070/010/hukusisikinn/3187.html",
+    "prefecture": "埼玉県",
+    "city": "川口市",
+    "category": "高齢者支援",
+    "keywords": [
+      "福祉資金",
+      "貸付",
+      "生活費",
+      "支援"
+    ]
+  },
+  {
+    "id": "kawaguchi_parent_support_shop",
+    "name": "パパ・ママ応援ショップ事業",
+    "amount": "協賛店での割引・サービス",
+    "eligibility": "18歳に達して次の3月31日を迎えるまでの子ども、または妊娠中の方がいる家庭",
+    "applicationMethod": "優待カードの取得（市町村窓口、LINE版）",
+    "referenceUrl": "https://www.city.kawaguchi.lg.jp/kosodate_gakkou/kosodatehenoteate_kyufu/2/12256.html",
+    "prefecture": "埼玉県",
+    "city": "川口市",
+    "category": "子育て支援",
+    "keywords": [
+      "パパ",
+      "ママ",
+      "応援ショップ",
+      "割引",
+      "子育て"
+    ]
+  },
+  {
+    "id": "kawaguchi_child_support_allowance",
+    "name": "児童扶養手当",
+    "amount": "所得に応じて支給額が変動",
+    "eligibility": "父母が離婚し、父または母と生計を同じくしていない児童、父または母が死亡した児童、父または母が一定の障害の状態にある児童など",
+    "applicationMethod": "要申請",
+    "referenceUrl": "https://www.city.kawaguchi.lg.jp/soshiki/01080/020/5/1/4211.html",
+    "prefecture": "埼玉県",
+    "city": "川口市",
+    "category": "子育て支援",
+    "keywords": [
+      "児童扶養手当",
+      "ひとり親",
+      "手当",
+      "支援"
+    ]
+  },
+  {
+    "id": "kawaguchi_single_parent_medical",
+    "name": "ひとり親家庭等医療費支給制度",
+    "amount": "保険適用の医療費の一部",
+    "eligibility": "18歳になった年の年度末までの児童（または20歳未満で一定の障害のある児童）と、その児童を監護している母、父、または養育者、所得制限あり",
+    "applicationMethod": "事前の受給資格登録が必要",
+    "referenceUrl": "https://www.city.kawaguchi.lg.jp/soshiki/01080/020/5/1/4210.html",
+    "prefecture": "埼玉県",
+    "city": "川口市",
+    "category": "医療費助成",
+    "keywords": [
+      "ひとり親",
+      "医療費",
+      "助成",
+      "支給制度"
+    ]
+  },
+  {
+    "id": "kawaguchi_jr_discount",
+    "name": "JR特定者用定期乗車券割引制度",
+    "amount": "JR定期乗車券が30%割引",
+    "eligibility": "児童扶養手当受給者とその世帯員",
+    "applicationMethod": "特定者資格証明書と購入証明書の取得",
+    "referenceUrl": "https://www.city.kawaguchi.lg.jp/soshiki/01080/020/5/1/1687.html",
+    "prefecture": "埼玉県",
+    "city": "川口市",
+    "category": "子育て支援",
+    "keywords": [
+      "JR",
+      "定期券",
+      "割引",
+      "ひとり親"
+    ]
+  },
+  {
+    "id": "kawaguchi_single_parent_support",
+    "name": "ひとり親家庭自立支援給付金事業",
+    "amount": "教育訓練給付金: 受講料の60%相当額（上限20万円）、高等職業訓練促進給付金: 要問合せ",
+    "eligibility": "ひとり親家庭の親が就職に有利な資格取得を目指す場合",
+    "applicationMethod": "要問合せ",
+    "referenceUrl": "https://www.city.kawaguchi.lg.jp/kosodate_gakkou/kosodatehenoteate_kyufu/1/38297.html",
+    "prefecture": "埼玉県",
+    "city": "川口市",
+    "category": "教育・学費",
+    "keywords": [
+      "ひとり親",
+      "自立支援",
+      "資格取得",
+      "教育訓練"
+    ]
+  },
+  {
+    "id": "kawaguchi_high_school_exam_support",
+    "name": "高等学校卒業程度認定試験合格支援事業",
+    "amount": "要問合せ（講座開始時、修了時、合格時に給付）",
+    "eligibility": "ひとり親家庭の親または子が、高卒認定試験合格を目指す場合",
+    "applicationMethod": "要問合せ",
+    "referenceUrl": "https://www.city.kawaguchi.lg.jp/kosodate_gakkou/kosodatehenoteate_kyufu/1/38297.html",
+    "prefecture": "埼玉県",
+    "city": "川口市",
+    "category": "教育・学費",
+    "keywords": [
+      "高校認定",
+      "試験",
+      "合格支援",
+      "ひとり親"
+    ]
+  },
+  {
+    "id": "kawaguchi_welfare_loan",
+    "name": "母子父子寡婦福祉資金貸付制度",
+    "amount": "要問合せ（教育資金、就職準備資金など）",
+    "eligibility": "ひとり親家庭の母または父、寡婦、その扶養する子など",
+    "applicationMethod": "要問合せ",
+    "referenceUrl": "https://www.city.kawaguchi.lg.jp/kosodate_gakkou/kosodatehenoteate_kyufu/1/38297.html",
+    "prefecture": "埼玉県",
+    "city": "川口市",
+    "category": "教育・学費",
+    "keywords": [
+      "母子",
+      "父子",
+      "寡婦",
+      "福祉資金",
+      "貸付"
+    ]
+  },
+  {
+    "id": "kawaguchi_premature_baby_medical",
+    "name": "未熟児養育医療給付制度",
+    "amount": "医療費の自己負担分（一部自己負担あり）",
+    "eligibility": "川口市に住民登録がある1歳未満の未熟児、指定医療機関に入院し、医師が入院治療を必要と認める",
+    "applicationMethod": "要問合せ",
+    "referenceUrl": "https://www.city.kawaguchi.lg.jp/kosodate_gakkou/kosodatehenoteate_kyufu/3/38297.html",
+    "prefecture": "埼玉県",
+    "city": "川口市",
+    "category": "医療費助成",
+    "keywords": [
+      "未熟児",
+      "養育医療",
+      "給付制度",
+      "新生児"
+    ]
+  },
+  {
+    "id": "kawaguchi_pediatric_chronic_disease",
+    "name": "小児慢性特定疾病医療費支給制度",
+    "amount": "医療費の自己負担分（一部自己負担あり）",
+    "eligibility": "川口市に住民登録がある慢性疾病の児童（18歳まで）、指定医療機関での治療",
+    "applicationMethod": "要問合せ",
+    "referenceUrl": "https://www.city.kawaguchi.lg.jp/kosodate_gakkou/kosodatehenoteate_kyufu/3/38297.html",
+    "prefecture": "埼玉県",
+    "city": "川口市",
+    "category": "医療費助成",
+    "keywords": [
+      "小児",
+      "慢性疾病",
+      "医療費",
+      "支給制度"
+    ]
+  },
+  {
+    "id": "kawaguchi_severe_disability_medical",
+    "name": "重度心身障害者医療費助成制度",
+    "amount": "医療費の自己負担分（一部自己負担あり）",
+    "eligibility": "重度の心身障害者",
+    "applicationMethod": "事前の受給者証の交付が必要",
+    "referenceUrl": "https://www.city.kawaguchi.lg.jp/kosodate_gakkou/kosodatehenoteate_kyufu/3/38297.html",
+    "prefecture": "埼玉県",
+    "city": "川口市",
+    "category": "医療費助成",
+    "keywords": [
+      "重度",
+      "心身障害者",
+      "医療費",
+      "助成制度"
+    ]
+  },
+  {
+    "id": "kawaguchi_disability_medical",
+    "name": "障害者自立支援医療（育成医療）",
+    "amount": "医療費の自己負担分（所得に応じた上限あり）",
+    "eligibility": "身体に障害がある、または将来的に障害が残ると認められる18歳未満の児童",
+    "applicationMethod": "要問合せ",
+    "referenceUrl": "https://www.city.kawaguchi.lg.jp/kosodate_gakkou/kosodatehenoteate_kyufu/3/38297.html",
+    "prefecture": "埼玉県",
+    "city": "川口市",
+    "category": "医療費助成",
+    "keywords": [
+      "障害者",
+      "自立支援",
+      "育成医療",
+      "医療費"
+    ]
+  },
+  {
+    "id": "kawaguchi_non_taxable_household_benefits",
+    "name": "住民税非課税世帯への給付金",
+    "amount": "1世帯あたり7万円（過去の給付金）、1世帯あたり3万円＋子ども1人あたり2万円（過去の給付金）",
+    "eligibility": "住民税非課税世帯",
+    "applicationMethod": "申請受付終了",
+    "referenceUrl": "https://www.city.kawaguchi.lg.jp/kenko_kaigo/seikatsuniokomarinokata/20196.html",
+    "prefecture": "埼玉県",
+    "city": "川口市",
+    "category": "高齢者支援",
+    "keywords": [
+      "住民税非課税",
+      "給付金",
+      "世帯"
+    ]
+  },
+  {
+    "id": "kawaguchi_child_inflation_support",
+    "name": "子育て世帯物価高騰対策支援給付事業",
+    "amount": "児童1人につき2,500円",
+    "eligibility": "2025年7月1日時点で川口市に住民票がある18歳までの児童",
+    "applicationMethod": "児童手当受給世帯は原則手続き不要、その他は申請書発送",
+    "referenceUrl": "https://www.city.kawaguchi.lg.jp/soshiki/01080/020/49021.html",
+    "prefecture": "埼玉県",
+    "city": "川口市",
+    "category": "子育て支援",
+    "keywords": [
+      "子育て世帯",
+      "物価高騰",
+      "支援給付",
+      "児童"
+    ]
+  },
+  {
+    "id": "kawaguchi_housing_security_benefits",
+    "name": "住居確保給付金",
+    "amount": "要問合せ",
+    "eligibility": "離職・廃業後2年以内、または休業等により収入が減少した方で、住居を失うおそれがある方など",
+    "applicationMethod": "要問合せ",
+    "referenceUrl": "https://www.city.kawaguchi.lg.jp/soshiki/01070/020/2/31019.html",
+    "prefecture": "埼玉県",
+    "city": "川口市",
+    "category": "高齢者支援",
+    "keywords": [
+      "住居確保",
+      "給付金",
+      "離職",
+      "廃業",
+      "収入減"
+    ]
+  },
+  {
+    "id": "kodaira_energy_saving_appliances",
+    "name": "小平市省エネ家電等買換促進補助金",
+    "amount": "購入・設置費用の1/4（上限3万円）",
+    "eligibility": "令和7年4月1日～10月31日に小平市内の小売店舗で新品の対象省エネ家電等に買い換え、小平市に住所を有する個人または事業所を有する事業者",
+    "applicationMethod": "電子申請、郵送、持参",
+    "referenceUrl": "https://www.city.kodaira.tokyo.jp/kurashi/102/102304.html",
+    "prefecture": "東京都",
+    "city": "小平市",
+    "category": "環境・省エネ",
+    "keywords": [
+      "省エネ",
+      "家電",
+      "買換",
+      "補助金"
+    ]
+  },
+  {
+    "id": "kodaira_wooden_house_earthquake",
+    "name": "木造住宅の耐震診断費用の一部補助",
+    "amount": "診断費用（消費税除く）の3/4（上限15万円）、耐震改修費用（消費税除く）の1/2（上限120万円）",
+    "eligibility": "昭和56年5月31日以前に建築された市内の木造住宅を所有する個人",
+    "applicationMethod": "要問合せ",
+    "referenceUrl": "https://www.city.kodaira.tokyo.jp/kurashi/032/032273.html",
+    "prefecture": "東京都",
+    "city": "小平市",
+    "category": "住宅リフォーム",
+    "keywords": [
+      "木造住宅",
+      "耐震",
+      "診断",
+      "改修",
+      "補助"
+    ]
+  },
+  {
+    "id": "kodaira_child_allowance",
+    "name": "児童手当",
+    "amount": "3歳未満: 15,000円、3歳～小学生(第1,2子): 10,000円、3歳～小学生(第3子～): 15,000円、中学生: 10,000円※所得制限撤廃（令和6年10月分から）",
+    "eligibility": "小平市に住所があり、高校生年代までの児童を養育する方",
+    "applicationMethod": "要申請",
+    "referenceUrl": "https://www.city.kodaira.tokyo.jp/kurashi/024/024974.html",
+    "prefecture": "東京都",
+    "city": "小平市",
+    "category": "子育て支援",
+    "keywords": [
+      "児童手当",
+      "子育て",
+      "手当",
+      "支援"
+    ]
+  },
+  {
+    "id": "kodaira_infant_medical",
+    "name": "乳幼児医療費助成制度（マル乳）",
+    "amount": "保険診療の自己負担分",
+    "eligibility": "小平市に住民登録がある乳幼児（就学前まで）",
+    "applicationMethod": "医療証の申請",
+    "referenceUrl": "https://www.city.kodaira.tokyo.jp/kurashi/000/000227.html",
+    "prefecture": "東京都",
+    "city": "小平市",
+    "category": "医療費助成",
+    "keywords": [
+      "乳幼児",
+      "医療費",
+      "助成",
+      "マル乳"
+    ]
+  },
+  {
+    "id": "kodaira_elementary_medical",
+    "name": "義務教育就学児医療費助成制度（マル子）",
+    "amount": "保険診療の自己負担分",
+    "eligibility": "小平市に住民登録がある義務教育就学児（小・中学生）",
+    "applicationMethod": "医療証の申請",
+    "referenceUrl": "https://www.city.kodaira.tokyo.jp/kurashi/003/003714.html",
+    "prefecture": "東京都",
+    "city": "小平市",
+    "category": "医療費助成",
+    "keywords": [
+      "義務教育",
+      "小学生",
+      "中学生",
+      "医療費",
+      "マル子"
+    ]
+  },
+  {
+    "id": "kodaira_high_school_medical",
+    "name": "高校生等医療費助成制度（マル青）",
+    "amount": "保険診療の自己負担分",
+    "eligibility": "小平市に住民登録がある高校生相当の年齢のお子さん",
+    "applicationMethod": "医療証の申請（一部自動送付あり）",
+    "referenceUrl": "https://www.city.kodaira.tokyo.jp/kurashi/101/101748.html",
+    "prefecture": "東京都",
+    "city": "小平市",
+    "category": "医療費助成",
+    "keywords": [
+      "高校生",
+      "医療費",
+      "助成",
+      "マル青"
+    ]
+  },
+  {
+    "id": "kodaira_child_development_allowance",
+    "name": "児童育成手当（育成手当）",
+    "amount": "月額13,500円",
+    "eligibility": "離婚や死別などでひとり親になった家庭、または父母のどちらかに重度の障がいがある家庭（所得制限あり）",
+    "applicationMethod": "要申請（毎年6月に現況届提出）",
+    "referenceUrl": "https://www.city.kodaira.tokyo.jp/kurashi/003/003757.html",
+    "prefecture": "東京都",
+    "city": "小平市",
+    "category": "子育て支援",
+    "keywords": [
+      "児童育成手当",
+      "ひとり親",
+      "育成手当",
+      "障がい"
+    ]
+  },
+  {
+    "id": "kodaira_child_support_allowance",
+    "name": "児童扶養手当",
+    "amount": "所得に応じて支給額が変動",
+    "eligibility": "離婚などでひとり親家庭になった方や、父または母が重度の障がいを持つ家庭（所得制限あり）",
+    "applicationMethod": "要申請",
+    "referenceUrl": "https://www.city.kodaira.tokyo.jp/kurashi/003/003752.html",
+    "prefecture": "東京都",
+    "city": "小平市",
+    "category": "子育て支援",
+    "keywords": [
+      "児童扶養手当",
+      "ひとり親",
+      "扶養手当",
+      "障がい"
+    ]
+  },
+  {
+    "id": "kodaira_single_parent_medical",
+    "name": "ひとり親家庭医療費助成制度（マル親医療証）",
+    "amount": "保険診療の自己負担分（住民税課税世帯は1割自己負担）",
+    "eligibility": "離婚や死亡などによるひとり親家庭や、保護者に重度の障がいがある家庭（所得制限あり）",
+    "applicationMethod": "医療証の申請",
+    "referenceUrl": "https://www.city.kodaira.tokyo.jp/kurashi/010/010337.html",
+    "prefecture": "東京都",
+    "city": "小平市",
+    "category": "医療費助成",
+    "keywords": [
+      "ひとり親",
+      "医療費",
+      "助成",
+      "マル親"
+    ]
+  },
+  {
+    "id": "kodaira_self_support_education",
+    "name": "母子家庭および父子家庭の自立支援教育訓練給付金",
+    "amount": "受講費用の60%（上限20万円）",
+    "eligibility": "ひとり親家庭の母または父で、就職に必要な資格や技能を取得するための指定講座を受講",
+    "applicationMethod": "事前相談が必要",
+    "referenceUrl": "https://www.city.kodaira.tokyo.jp/kurashi/049/049796.html",
+    "prefecture": "東京都",
+    "city": "小平市",
+    "category": "教育・学費",
+    "keywords": [
+      "母子家庭",
+      "父子家庭",
+      "自立支援",
+      "教育訓練",
+      "給付金"
+    ]
+  },
+  {
+    "id": "kodaira_high_school_exam_support",
+    "name": "高等学校卒業程度認定試験合格支援給付金",
+    "amount": "要問合せ（受講費用の一部）",
+    "eligibility": "ひとり親家庭の親または子が、高卒認定試験合格を目指す場合",
+    "applicationMethod": "要問合せ",
+    "referenceUrl": "https://www.city.kodaira.tokyo.jp/kurashi/077/077974.html",
+    "prefecture": "東京都",
+    "city": "小平市",
+    "category": "教育・学費",
+    "keywords": [
+      "高校認定",
+      "試験",
+      "合格支援",
+      "ひとり親"
+    ]
+  },
+  {
+    "id": "kodaira_vocational_training_allowance",
+    "name": "高等職業訓練促進給付金",
+    "amount": "非課税世帯: 月額10万円（訓練修了前12ヶ月は14万円）、課税世帯: 月額70,500円（訓練修了前12ヶ月は110,500円）、修了支援給付金あり",
+    "eligibility": "ひとり親家庭の母または父が、就職に有利な資格取得を目指して訓練機関で修業する場合（所得制限あり）",
+    "applicationMethod": "事前相談が必要",
+    "referenceUrl": "https://www.city.kodaira.tokyo.jp/kurashi/049/049794.html",
+    "prefecture": "東京都",
+    "city": "小平市",
+    "category": "教育・学費",
+    "keywords": [
+      "職業訓練",
+      "促進給付金",
+      "ひとり親",
+      "資格取得"
+    ]
+  },
+  {
+    "id": "kodaira_welfare_fund_loan",
+    "name": "母子・父子・女性福祉資金貸付",
+    "amount": "要問合せ",
+    "eligibility": "ひとり親家庭の母または父、寡婦、その扶養する子など",
+    "applicationMethod": "要問合せ",
+    "referenceUrl": "https://www.city.kodaira.tokyo.jp/kurashi/049/049779.html",
+    "prefecture": "東京都",
+    "city": "小平市",
+    "category": "高齢者支援",
+    "keywords": [
+      "母子",
+      "父子",
+      "女性",
+      "福祉資金",
+      "貸付"
+    ]
+  },
+  {
+    "id": "kodaira_stray_cat_surgery",
+    "name": "飼い主のいない猫の不妊・去勢手術費の一部補助",
+    "amount": "不妊手術: 上限15,000円、去勢手術: 上限10,000円",
+    "eligibility": "ボランティア団体が市内生息の飼い主のいない猫に行う手術",
+    "applicationMethod": "要問合せ",
+    "referenceUrl": "https://www.city.kodaira.tokyo.jp/kurashi/051/051317.html",
+    "prefecture": "東京都",
+    "city": "小平市",
+    "category": "環境・省エネ",
+    "keywords": [
+      "猫",
+      "不妊手術",
+      "去勢手術",
+      "動物愛護"
+    ]
+  },
+  {
+    "id": "tokyo_018_support",
+    "name": "018サポート",
+    "amount": "月額5,000円",
+    "eligibility": "都内在住の0歳から18歳までの子供",
+    "applicationMethod": "要問合せ",
+    "referenceUrl": "https://www.support-navi.metro.tokyo.lg.jp/detail/1/BK8CMWj3JMD3WoW9U",
+    "prefecture": "東京都",
+    "city": "東京都",
+    "category": "子育て支援",
+    "keywords": [
+      "018サポート",
+      "子育て",
+      "手当",
+      "東京都"
+    ]
+  },
+  {
+    "id": "tokyo_birth_childcare_support",
+    "name": "東京都出産・子育て応援事業",
+    "amount": "妊娠時に5万円、出産後に子供1人につき10万円",
+    "eligibility": "妊娠届出をした妊婦、2022年4月1日以降に出生した子供の母",
+    "applicationMethod": "要問合せ",
+    "referenceUrl": "https://www.support-navi.metro.tokyo.lg.jp/detail/1/bdtFlNZYLxI4XnCER",
+    "prefecture": "東京都",
+    "city": "東京都",
+    "category": "子育て支援",
+    "keywords": [
+      "出産",
+      "子育て",
+      "応援事業",
+      "妊娠",
+      "東京都"
+    ]
+  },
+  {
+    "id": "tokyo_high_school_support",
+    "name": "高等学校等就学支援金",
+    "amount": "授業料相当額（最大36ヶ月、定時制・通信制は48ヶ月）",
+    "eligibility": "都立高校等に通う年収約910万円未満の世帯の生徒",
+    "applicationMethod": "要問合せ",
+    "referenceUrl": "https://www.support-navi.metro.tokyo.lg.jp/detail/1/fA6v319i3qm5zWkbw",
+    "prefecture": "東京都",
+    "city": "東京都",
+    "category": "教育・学費",
+    "keywords": [
+      "高等学校",
+      "就学支援金",
+      "授業料",
+      "東京都"
+    ]
+  },
+  {
+    "id": "tokyo_device_purchase_support",
+    "name": "都立高等学校及び都立中等教育学校後期課程の入学者への端末購入支援金",
+    "amount": "端末1台につき最大30,000円（多子世帯や給付型奨学金対象世帯には追加支援あり）",
+    "eligibility": "都立高校等に入学し端末を購入する生徒",
+    "applicationMethod": "要問合せ",
+    "referenceUrl": "https://www.support-navi.metro.tokyo.lg.jp/detail/1/bdtFlNZYLxIJ4nCER",
+    "prefecture": "東京都",
+    "city": "東京都",
+    "category": "教育・学費",
+    "keywords": [
+      "端末",
+      "購入支援",
+      "高校",
+      "中等教育",
+      "東京都"
+    ]
+  },
+  {
+    "id": "tokyo_school_trip_support",
+    "name": "修学旅行費補助",
+    "amount": "定時制: 上限5,000円、通信制: 上限2,000円",
+    "eligibility": "都立高校の定時制・通信制課程の授業料減免者に相当し、かつ有職生徒",
+    "applicationMethod": "要問合せ",
+    "referenceUrl": "https://www.support-navi.metro.tokyo.lg.jp/detail/1/5XqzJrQCsVIbiZJmE",
+    "prefecture": "東京都",
+    "city": "東京都",
+    "category": "教育・学費",
+    "keywords": [
+      "修学旅行",
+      "補助",
+      "定時制",
+      "通信制",
+      "東京都"
+    ]
+  },
+  {
+    "id": "tokyo_child_safety_housing",
+    "name": "「子供を守る」住宅確保促進事業",
+    "amount": "改修工事費用の2/3（上限30万円）",
+    "eligibility": "マンション居住者で子供の安全確保のための工事を行う場合",
+    "applicationMethod": "要問合せ",
+    "referenceUrl": "https://www.support-navi.metro.tokyo.lg.jp/detail/1/sM02yI8GkEuNyjzta",
+    "prefecture": "東京都",
+    "city": "東京都",
+    "category": "住宅リフォーム",
+    "keywords": [
+      "子供",
+      "安全",
+      "住宅",
+      "改修",
+      "東京都"
+    ]
+  },
+  {
+    "id": "tokyo_scholarship_high_school",
+    "name": "給付型奨学金（高等学校）",
+    "amount": "要問合せ（世帯収入に応じて変動）",
+    "eligibility": "都立高校等に通う生徒（所得制限あり）",
+    "applicationMethod": "要問合せ",
+    "referenceUrl": "https://www.support-navi.metro.tokyo.lg.jp/detail/1/DjG18gP3Xo644sKJF",
+    "prefecture": "東京都",
+    "city": "東京都",
+    "category": "教育・学費",
+    "keywords": [
+      "給付型",
+      "奨学金",
+      "高等学校",
+      "東京都"
+    ]
+  },
+  {
+    "id": "tokyo_startup_gateway",
+    "name": "次世代アントレプレナー育成プログラム（TOKYO STARTUP GATEWAY）",
+    "amount": "最優秀者: 300万円、優秀者: 150万円、ファイナリスト: 30万円、都内での法人設立時: 活動資金100万円（支給される場合あり）",
+    "eligibility": "15歳から39歳までの起業を目指す個人",
+    "applicationMethod": "要問合せ",
+    "referenceUrl": "https://www.support-navi.metro.tokyo.lg.jp/detail/1/DjG18gP3Xo6TasKJF",
+    "prefecture": "東京都",
+    "city": "東京都",
+    "category": "起業・経営支援",
+    "keywords": [
+      "起業",
+      "アントレプレナー",
+      "スタートアップ",
+      "東京都"
+    ]
+  },
+  {
+    "id": "tokyo_metropolitan_university_tuition_reduction",
+    "name": "都立大学等の新たな授業料減免制度",
+    "amount": "授業料全額免除",
+    "eligibility": "都立大学、東京都立産業技術大学院大学、東京都立産業技術高等専門学校の学生で、生計維持者が都内在住の子育て世帯",
+    "applicationMethod": "要申請",
+    "referenceUrl": "https://www.support-navi.metro.tokyo.lg.jp/detail/1/m2jqKsxOj8kTt3R1c",
+    "prefecture": "東京都",
+    "city": "東京都",
+    "category": "教育・学費",
+    "keywords": [
+      "都立大学",
+      "授業料",
+      "減免",
+      "子育て世帯",
+      "東京都"
+    ]
+  },
+  {
+    "id": "tokyo_babysitter_support",
+    "name": "ベビーシッター利用支援事業（ベビーシッター事業者連携型）",
+    "amount": "ベビーシッター利用料の一部",
+    "eligibility": "待機児童の保護者、育児休業満了者、夜間帯保育を必要とする保護者",
+    "applicationMethod": "要問合せ",
+    "referenceUrl": "https://www.support-navi.metro.tokyo.lg.jp/detail/1/SzEZL5IOqKTzWstL2",
+    "prefecture": "東京都",
+    "city": "東京都",
+    "category": "子育て支援",
+    "keywords": [
+      "ベビーシッター",
+      "保育",
+      "待機児童",
+      "東京都"
+    ]
+  },
+  {
+    "id": "tokyo_public_high_school_scholarship",
+    "name": "国公立高等学校等奨学のための給付金",
+    "amount": "世帯の状況によって異なる（年額32,300円～143,700円）",
+    "eligibility": "生活保護受給世帯や非課税世帯で、7月1日時点で都内に住所を持つ保護者と、就学支援金等の受給資格を持つ高校生",
+    "applicationMethod": "要問合せ",
+    "referenceUrl": "https://www.support-navi.metro.tokyo.lg.jp/detail/1/z9p46Xc3VCHAOwwsj",
+    "prefecture": "東京都",
+    "city": "東京都",
+    "category": "教育・学費",
+    "keywords": [
+      "奨学金",
+      "給付金",
+      "高等学校",
+      "非課税世帯",
+      "東京都"
+    ]
+  },
+  {
+    "id": "tokyo_emergency_scholarship",
+    "name": "国公立高等学校等奨学のための給付金（家計急変）",
+    "amount": "世帯の状況によって異なる（年額32,300円～143,700円）",
+    "eligibility": "家計が急変し、所得割額が非課税相当となる見込みの世帯で、都内に住所があり、就学支援金等の受給資格を持つ高校生",
+    "applicationMethod": "要問合せ",
+    "referenceUrl": "https://www.support-navi.metro.tokyo.lg.jp/detail/1/DjG18gP3Xo647sKJF",
+    "prefecture": "東京都",
+    "city": "東京都",
+    "category": "教育・学費",
+    "keywords": [
+      "奨学金",
+      "給付金",
+      "家計急変",
+      "高等学校",
+      "東京都"
+    ]
+  },
+  {
+    "id": "tokyo_early_scholarship",
+    "name": "国公立高等学校等奨学のための給付金（一部早期給付）",
+    "amount": "年額の1/4",
+    "eligibility": "生活保護受給世帯または非課税世帯で、高校等就学支援金または学び直し支援金の受給資格を持つ高校生",
+    "applicationMethod": "要問合せ",
+    "referenceUrl": "https://www.support-navi.metro.tokyo.lg.jp/detail/1/8nTYrvR7TaFjW0wJB",
+    "prefecture": "東京都",
+    "city": "東京都",
+    "category": "教育・学費",
+    "keywords": [
+      "奨学金",
+      "給付金",
+      "早期給付",
+      "高等学校",
+      "東京都"
+    ]
+  },
+  {
+    "id": "tokyo_metropolitan_university_tuition_exemption",
+    "name": "都立の大学・高専の授業料の減免等（東京都立大学）",
+    "amount": "授業料の減額または免除",
+    "eligibility": "生計が困難な学生（生業不振や失業などにより世帯の生計が困難になった学生）",
+    "applicationMethod": "Webサイトの申請要項に従って申請",
+    "referenceUrl": "https://www.support-navi.metro.tokyo.lg.jp/detail/1/Rq1ECmera6cbVNSDB",
+    "prefecture": "東京都",
+    "city": "東京都",
+    "category": "教育・学費",
+    "keywords": [
+      "都立大学",
+      "授業料",
+      "減免",
+      "困窮学生",
+      "東京都"
+    ]
+  }
+]
