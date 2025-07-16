@@ -18,8 +18,10 @@ export async function loadAllSubsidies(): Promise<Subsidy[]> {
   const subsidies: Subsidy[] = [];
   
   try {
-    // 環境に応じたベースパス
-    const basePath = process.env.NODE_ENV === 'production' ? '/subsidiary-aid-search' : '';
+    // 環境に応じたベースパス（GitHub Pagesでは常にbasePathが必要）
+    const isGitHubPages = typeof window !== 'undefined' && window.location.hostname.includes('github.io');
+    const isDev = typeof window !== 'undefined' && window.location.hostname === 'localhost';
+    const basePath = isGitHubPages ? '/subsidiary-aid-search' : '';
     
     // 都道府県とファイルのマッピング
     const dataFiles = [
