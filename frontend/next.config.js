@@ -2,8 +2,8 @@
 const nextConfig = {
   output: 'export',
   trailingSlash: true,
-  basePath: '/subsidiary-aid-search',
-  assetPrefix: '/subsidiary-aid-search/',
+  basePath: process.env.NODE_ENV === 'production' ? '/subsidiary-aid-search' : '',
+  assetPrefix: process.env.NODE_ENV === 'production' ? '/subsidiary-aid-search/' : '',
   images: {
     unoptimized: true
   },
@@ -11,7 +11,6 @@ const nextConfig = {
     ignoreBuildErrors: false,
   },
   reactStrictMode: true,
-  swcMinify: true,
 }
 
 module.exports = nextConfig

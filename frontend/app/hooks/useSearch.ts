@@ -1,22 +1,8 @@
 'use client'
 
 import { useState, useEffect, useMemo } from 'react'
-import FlexSearch from 'flexsearch'
-import subsidiesData from '../data/subsidies.json'
-import kodairaData from '../data/tokyo/kodaira.json'
-
-export interface Subsidy {
-  id: string
-  name: string
-  amount: string
-  eligibility: string
-  applicationMethod: string
-  referenceUrl: string
-  prefecture: string
-  city: string
-  category: string
-  keywords: string[]
-}
+import FlexSearch, { Index } from 'flexsearch'
+import { loadAllSubsidies, type Subsidy } from '../utils/loadSubsidies'
 
 export interface SearchFilter {
   query?: string
@@ -29,36 +15,47 @@ export function useSearch() {
   const [searchResults, setSearchResults] = useState<Subsidy[]>([])
   const [isLoading, setIsLoading] = useState(false)
   const [currentFilter, setCurrentFilter] = useState<SearchFilter>({})
+  const [allSubsidiesData, setAllSubsidiesData] = useState<Subsidy[]>([])
+  const [searchIndex, setSearchIndex] = useState<Index | null>(null)
 
-  // 全てのデータを統合
-  const allSubsidiesData = useMemo(() => {
-    return [...subsidiesData, ...kodairaData]
+  // データの読み込みとインデックス作成
+  useEffect(() => {
+    const initializeData = async () => {
+      try {
+        const data = await loadAllSubsidies()
+        setAllSubsidiesData(data)
+
+        // FlexSearchインデックスの初期化
+        const index = new Index({
+          tokenize: 'forward'
+        })
+
+        // データをインデックスに追加
+        data.forEach((subsidy) => {
+          const searchText = [
+            subsidy.name,
+            subsidy.category || '',
+            subsidy.keywords?.join(' ') || '',
+            subsidy.prefecture,
+            subsidy.city,
+            subsidy.eligibility
+          ].join(' ')
+          
+          index.add(subsidy.id, searchText)
+        })
+
+        setSearchIndex(index)
+      } catch (error) {
+        console.error('データの初期化エラー:', error)
+      }
+    }
+
+    initializeData()
   }, [])
 
-  // FlexSearchインデックスの初期化
-  const searchIndex = useMemo(() => {
-    const index = new FlexSearch.Index({
-      tokenize: 'forward'
-    })
-
-    // データをインデックスに追加
-    allSubsidiesData.forEach((subsidy) => {
-      const searchText = [
-        subsidy.name,
-        subsidy.category,
-        subsidy.keywords.join(' '),
-        subsidy.prefecture,
-        subsidy.city,
-        subsidy.eligibility
-      ].join(' ')
-      
-      index.add(subsidy.id, searchText)
-    })
-
-    return index
-  }, [allSubsidiesData])
-
   const search = async (searchFilter: SearchFilter) => {
+    if (!searchIndex) return
+    
     setCurrentFilter(searchFilter)
     setIsLoading(true)
     

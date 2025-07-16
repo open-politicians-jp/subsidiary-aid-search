@@ -45,8 +45,8 @@
       "name": "東京都",
       "reading": "とうきょうと",
       "region": "関東",
-      "cityCount": 4,
-      "subsidyCount": 14
+      "cityCount": 5,
+      "subsidyCount": 28
     },
     {
       "id": "kanagawa",
@@ -105,8 +105,8 @@
       "subsidyCount": 0
     }
   ],
-  "totalCities": 16,
-  "totalSubsidies": 31,
-  "lastUpdated": "2025-01-13",
+  "totalCities": 17,
+  "totalSubsidies": 45,
+  "lastUpdated": "2025-07-14",
   "version": "1.0"
 }

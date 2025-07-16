@@ -1,4 +1,4 @@
-import { Subsidy } from '../hooks/useSearch'
+import { type Subsidy } from '../utils/loadSubsidies'
 
 interface SearchResultsProps {
   results: Subsidy[]

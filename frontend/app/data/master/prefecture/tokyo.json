@@ -11,6 +11,17 @@
     "keywords": ["小平", "こだいら", "東京"]
   },
   {
+    "id": "tokyo-to",
+    "name": "東京都",
+    "reading": "とうきょうと",
+    "prefecture": "tokyo",
+    "prefectureName": "東京都",
+    "type": "都",
+    "population": 14000000,
+    "subsidyCount": 14,
+    "keywords": ["東京都", "とうきょうと", "都", "東京"]
+  },
+  {
     "id": "shibuya",
     "name": "渋谷区",
     "reading": "しぶや",
