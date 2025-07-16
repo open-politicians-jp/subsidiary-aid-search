@@ -15,20 +15,50 @@ export interface Subsidy {
 
 // 全ての補助金データを読み込む関数
 export async function loadAllSubsidies(): Promise<Subsidy[]> {
+  const subsidies: Subsidy[] = [];
+  
   try {
     // 環境に応じたベースパス（GitHub Pagesでは常にbasePathが必要）
     const isGitHubPages = typeof window !== 'undefined' && window.location.hostname.includes('github.io');
     const basePath = isGitHubPages ? '/subsidiary-aid-search' : '';
     
-    // 統合済みのデータファイルを読み込み
-    const response = await fetch(`${basePath}/subsidies.json`);
-    if (!response.ok) {
-      console.error(`Failed to load subsidies: ${response.status}`);
+    // ビルド時に生成されたファイルリストを取得
+    const fileListResponse = await fetch(`${basePath}/subsidies-files.json`);
+    if (!fileListResponse.ok) {
+      console.error(`Failed to load file list: ${fileListResponse.status}`);
       return [];
     }
     
-    const data = await response.json();
-    return Array.isArray(data) ? data : [];
+    const fileList: string[] = await fileListResponse.json();
+    console.log(`Found ${fileList.length} subsidy files to load`);
+    
+    // 各ファイルを並列で読み込み
+    const promises = fileList.map(async (fileName) => {
+      try {
+        const filePath = `${basePath}/data/subsidies/${fileName}`;
+        const response = await fetch(filePath);
+        if (!response.ok) {
+          console.warn(`Failed to load ${filePath}: ${response.status}`);
+          return [];
+        }
+        const data = await response.json();
+        console.log(`Loaded ${Array.isArray(data) ? data.length : 0} subsidies from ${fileName}`);
+        return Array.isArray(data) ? data : [];
+      } catch (error) {
+        console.warn(`Error loading ${fileName}:`, error);
+        return [];
+      }
+    });
+    
+    const results = await Promise.all(promises);
+    
+    // 全ての結果をまとめる
+    results.forEach(fileData => {
+      subsidies.push(...fileData);
+    });
+    
+    console.log(`Total loaded: ${subsidies.length} subsidies`);
+    return subsidies;
   } catch (error) {
     console.error('Error loading subsidies:', error);
     return [];

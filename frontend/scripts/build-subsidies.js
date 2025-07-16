@@ -1,39 +1,46 @@
 const fs = require('fs');
 const path = require('path');
 
-// ビルド時に全ての補助金データを統合するスクリプト
-async function buildSubsidiesData() {
+// ビルド時にディレクトリをスキャンしてファイルリストを生成するスクリプト
+async function buildSubsidiesFileList() {
   try {
-    const subsidies = [];
+    const subsidiesDir = 'public/data/subsidies';
     
-    // データファイルのパス
-    const dataFiles = [
-      'public/data/subsidies/saitama/kawaguchi.json',
-      'public/data/subsidies/tokyo/kodaira.json',
-      'public/data/subsidies/tokyo/tokyo-to.json'
-    ];
+    if (!fs.existsSync(subsidiesDir)) {
+      console.error(`Directory not found: ${subsidiesDir}`);
+      process.exit(1);
+    }
     
-    // 各ファイルを読み込み
-    for (const filePath of dataFiles) {
-      if (fs.existsSync(filePath)) {
-        const fileContent = fs.readFileSync(filePath, 'utf8');
-        const data = JSON.parse(fileContent);
-        subsidies.push(...data);
-        console.log(`Loaded ${data.length} subsidies from ${filePath}`);
-      } else {
-        console.warn(`File not found: ${filePath}`);
+    const fileList = [];
+    
+    // ディレクトリを再帰的にスキャン
+    function scanDirectory(dirPath, basePath = '') {
+      const entries = fs.readdirSync(dirPath, { withFileTypes: true });
+      
+      for (const entry of entries) {
+        const fullPath = path.join(dirPath, entry.name);
+        const relativePath = basePath ? `${basePath}/${entry.name}` : entry.name;
+        
+        if (entry.isDirectory()) {
+          scanDirectory(fullPath, relativePath);
+        } else if (entry.isFile() && entry.name.endsWith('.json')) {
+          fileList.push(relativePath);
+          console.log(`Found JSON file: ${relativePath}`);
+        }
       }
     }
     
-    // 統合データを public/subsidies.json に出力
-    const outputPath = 'public/subsidies.json';
-    fs.writeFileSync(outputPath, JSON.stringify(subsidies, null, 2));
-    console.log(`Combined ${subsidies.length} subsidies into ${outputPath}`);
+    scanDirectory(subsidiesDir);
+    
+    // ファイルリストを public/subsidies-files.json に出力
+    const outputPath = 'public/subsidies-files.json';
+    fs.writeFileSync(outputPath, JSON.stringify(fileList, null, 2));
+    console.log(`Generated file list with ${fileList.length} files: ${outputPath}`);
     
   } catch (error) {
-    console.error('Error building subsidies data:', error);
+    console.error('Error building subsidies file list:', error);
     process.exit(1);
   }
 }
 
-buildSubsidiesData();
+buildSubsidiesFileList();
