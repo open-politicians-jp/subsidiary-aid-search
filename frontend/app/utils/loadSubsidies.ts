@@ -15,45 +15,20 @@ export interface Subsidy {
 
 // 全ての補助金データを読み込む関数
 export async function loadAllSubsidies(): Promise<Subsidy[]> {
-  const subsidies: Subsidy[] = [];
-  
   try {
     // 環境に応じたベースパス（GitHub Pagesでは常にbasePathが必要）
     const isGitHubPages = typeof window !== 'undefined' && window.location.hostname.includes('github.io');
-    const isDev = typeof window !== 'undefined' && window.location.hostname === 'localhost';
     const basePath = isGitHubPages ? '/subsidiary-aid-search' : '';
     
-    // 都道府県とファイルのマッピング
-    const dataFiles = [
-      `${basePath}/data/subsidies/saitama/kawaguchi.json`,
-      `${basePath}/data/subsidies/tokyo/kodaira.json`, 
-      `${basePath}/data/subsidies/tokyo/tokyo-to.json`
-    ];
+    // 統合済みのデータファイルを読み込み
+    const response = await fetch(`${basePath}/subsidies.json`);
+    if (!response.ok) {
+      console.error(`Failed to load subsidies: ${response.status}`);
+      return [];
+    }
     
-    // 各ファイルを並列で読み込み
-    const promises = dataFiles.map(async (filePath) => {
-      try {
-        const response = await fetch(filePath);
-        if (!response.ok) {
-          console.warn(`Failed to load ${filePath}: ${response.status}`);
-          return [];
-        }
-        const data = await response.json();
-        return Array.isArray(data) ? data : [];
-      } catch (error) {
-        console.warn(`Error loading ${filePath}:`, error);
-        return [];
-      }
-    });
-    
-    const results = await Promise.all(promises);
-    
-    // 全ての結果をまとめる
-    results.forEach(fileData => {
-      subsidies.push(...fileData);
-    });
-    
-    return subsidies;
+    const data = await response.json();
+    return Array.isArray(data) ? data : [];
   } catch (error) {
     console.error('Error loading subsidies:', error);
     return [];
